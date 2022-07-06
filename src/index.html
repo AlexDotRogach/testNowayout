@@ -9,18 +9,185 @@
     <link href="style-min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header">
+        <img class="header-logo" src="icons/Horizontal logo.svg" alt="logo"></img>
         <div class="header-item">
-            <img class="header-item__icon" src="icons/Horizontal logo.svg" alt="logo"></img>
-            <div class="header-item__city"></div>
-            <div class="header-item__phone"></div>
+            <div class="header-item__city">
+                <img class="header-item__city-icon" src="icons/Pin.svg" alt="pin"></img>
+                <div class="header-item__city-text">Vienna</div>
+                <img class="header-item__city-arrow" src="icons/arrow_down.svg" alt="arrow"></img>
+            </div>
+            <div class="header-item__phone">
+                <img class="header-item__phone-icon" src="icons/Phone.svg" alt="phone"></img>
+                <div class="header-item__phone-text">+43 660 605 0000</div>
+            </div>
         </div>
-        
-        <div class="header-item">
-            
+        <!-- city popup -->
+        <div class="header-popup">
+            <div class="header-popup__question-text">Are you in Vienna?</div>
+            <div class="header-popup__btn-wrap">
+                <div class="header-popup__btn-wrap-yes"><button class="header-popup__btn-yes">Yes</button></div>
+                <div class="header-popup__btn-wrap-another"><button class="header-popup__btn-another">Another</button></div>
+            </div>
+        </div>
+        <!-- popup choose  -->
+        <div class="header-popup" style="top: 64px">
+            <div class="header-popup__choose">
+                <div class="header-popup__choose-text">Choose your city:</div>
+                <div class="header-popup__choose-close"></div>
+
+                <div class="header-popup__cities">
+                    <div class="header-popup__cities-item">
+                        <div class="header-popup__item-text">
+                            <div class="header-popup__pin"></div>
+                            <div class="header-popup__pin-text">Vienna</div>
+                        </div>
+                        <div class="header-popup__address">Rauhensteingasse 7, 1010</div>
+                    </div>
+
+                    <div class="header-popup__cities-item">
+                        <div class="header-popup__item-text">
+                            <div class="header-popup__pin"></div>
+                            <div class="header-popup__pin-text">Linz</div>
+                        </div>
+                        <div class="header-popup__address">Prinz-Eugen-Straße 22, 4020</div>
+                    </div>
+
+                    <div class="header-popup__cities-item">
+                        <div class="header-popup__item-text">
+                            <div class="header-popup__pin"></div>
+                            <div class="header-popup__pin-text">Innsbruck</div>
+                        </div>
+                        <div class="header-popup__address">Grabenweg 12, 6020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right block header  -->
+        <div class="header-item header-item_right">
+            <div class="header-item__list">
+                <!-- <div class="header-item__floating-menu"></div> -->
+                <div class="header-item__list-item">Schedule</div>
+                <div class="header-item__list-item">Rooms</div>
+                <div class="header-item__list-item">Contacts</div>
+                <div class="header-item__list-item">
+                    <div class="header-item__language">
+                        <img class="header-item__flag-uk" src="icons/united-kingdom.svg" alt="flag">
+                        <img class="header-item__flag-g" src="icons/germany.svg" alt="flag">
+                    </div>
+                </div>
+            </div>
+            <!-- mobile version menu  -->
+            <div class="header-item__list_mb">
+                <div class="header-item__list-item_mb">Schedule</div>
+                <div class="header-item__list-item_mb">Rooms</div>
+                <div class="header-item__list-item_mb">Contacts</div>
+            </div>
+            <div class="header-item__language_mb">
+                <img class="header-item__flag-uk_mb" src="icons/united-kingdom.svg" alt="flag">
+                <img class="header-item__flag-g_mb" src="icons/germany.svg" alt="flag">
+            </div>
+            <!-- end -->
+            <div class="header-item__burger-wrapper">
+                <div class="header-item__burger">
+                    <div></div>
+                </div>
+            </div>
         </div>
     </header>
+    <!-- second -->
+    <section id="start" class="start-page">
+        <div class="start-page__text">
+            <span class="start-page__main-text">№1 Escape <br>rooms<br> in Vienna</span>
+            <span class="start-page__player-text">64,232 players have chosen us worldwide </span>
+            <button class="start-page__btn">Book now</button>
+        </div>
 
+        <img src="icons/start_logo.svg" class="start-page__icon" alt="icon">
+    </section>
+    <!-- third -->
+    <section id="games" class="games">
+        <div class="games-main">
+            <span class="games-main__title">Our games</span>
+            <button class="games-main__back-btn"><img src="icons/left-arrow.png" class="games-main__back-img" alt="arrow"></button>
+            <div class="games-main__cards-wrapper">
+                <div class="games-main__cards">
+                    <!-- <div class="games-main__card">
+                        <img src="img/Mask-Group.svg" class="games-main__card-image" alt="card_image">
+                        <button class="games-main__card-btn">Adventure/Mystery</button>
+                        <div class="games-main__card-title">Mission Belvedere</div>
+                        <div class="games-main__info-card">
+                            <div class="games-main__card-block">
+                                <div class="games-main__card-time"><img src="icons/clock.svg"><span>60 min</span></div>
+                                <div class="games-main__card-complexity"><img src="icons/key.svg"><span>Difficult</span></div>
+                                <div class="games-main__card-people"><img src="icons/people.svg"><span>2-6</span></div>
+                            </div>
+                            <div class="games-main__describe">
+                                Nehmt an dem Raub des <br>Jahrhunderts teil! Macht mit und<br> versucht, Gustav Klimts "Der<br> Kuss" aus Österreichs sicherstem <br>Museum zu stehlen.
+                            </div>
+                            <div class="games-main__info-btnWrap">
+                                <button class="games-main__info-btn">Select game</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <button class="games-main__forward-btn"><img src="icons/right-arrow.png" class="games-main__forward-img" alt="arrow"></button>
+        </div>
+    </section>
+
+    <footer>
+        <img src="img/Light.png" class="footer-light" alt="light">
+        <div class="footer-left">
+            <img src="icons/Horizontal logo2.svg" class="footer-left__logo" alt="logo_left">
+            <span class="footer-left__text">
+                Impressum<br>
+                Elite Experience EC Gmbh,<br>
+                FN 491623a,<br>
+                Pirchäckerstrasse 34, 8053 Graz
+            </span>
+            <span class="footer-left__accept">We accept:<br><img src="icons/accept_icons.svg" class="footer-left__icons" alt="accept_icons"></span>
+            <span class="footer-left__data">Ⓒ2020 NoWayOut All Rights Reserved</span>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-middle__text-section">
+                <div class="footer-middle__text">
+                    <span>Rooms</span>
+                    <span>Gift card</span>
+                    <span>How to play</span>
+                    <span>Blog</span>
+                </div>
+                <div class="footer-middle__text">
+                    <span>Corporate</span>
+                    <span>Birthday parties</span>
+                    <span>Special offer</span>
+                    <span>Bandle</span>
+                </div>
+                <div class="footer-middle__text">
+                    <span>Contact Use</span>
+                    <span>About us</span>
+                    <span>Career</span>
+                </div>
+            </div>
+            
+            <div class="footer-middle__priv-polc">
+                <span>Privacy Policy</span>
+                <span>Terms Of Use</span>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-right__wrapper-btn">
+                <img src="icons/arrow_upward.svg" class="footer-right__arrow-up" alt="arrow">
+            </div>
+            <div class="footer-right__language">
+                <span class="footer-right__de">DE</span>
+                <span class="footer-right__en">EN</span>
+            </div>
+            <img src="icons/SMM.svg" class="footer-right__smm" alt="SMM">
+        </div>
+    </footer>
 </body>
-<script src="js/main.js"></script>
+<script src="bundle.js"></script>
 </html>

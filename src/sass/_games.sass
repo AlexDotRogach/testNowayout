@@ -1,0 +1,94 @@
+.games
+    background: black
+    height: 1034px
+    border-bottom: 1px solid rgba(255,255,255,.15)
+    color: #F7F5F9
+    &-main
+        padding: 64px 122px 107px 122px
+        max-height: 865px
+        position: relative
+        &__back-btn
+            +btn_slider
+            left: 30px
+        &__forward-btn
+            +btn_slider
+            right: 30px
+        &__forward-btn, &__back-btn // Style
+            border: none
+            border-radius: 50%
+            background: rgba(255, 255, 255, 0.4)
+            &:hover
+                background: rgba(255, 255, 255, 0.6)
+        &__title
+            font-size: 36px
+            line-height: 45px
+            font-family: MADE Outer Sans Light
+        &__cards-wrapper
+            overflow: hidden
+        &__cards
+            display: flex
+            justify-content: space-between
+            position: relative
+            transition: all ease 1s
+            left: 0 
+        &__card
+            position: relative
+            width: 327px
+            margin-top: 34px
+            background: rgba(255, 255, 255, 0.05)
+            border: 1px solid rgba(255, 255, 255, 0.05)
+            margin-left: 10px
+            &:hover
+                opacity: 0.8
+        &__card-btn
+            position: absolute
+            left: 30px
+            top: 30px
+            padding: 4px 8px
+            background: rgba(255, 255, 255, 0.05)
+            border: 1px solid #F7F5F9
+            backdrop-filter: blur(33px)
+            border-radius: 100px
+            color: #F7F5F9
+            font-size: 14px
+            font-family: MADE Outer Sans Thin
+            outline: none !important
+        &__card-title
+            position: absolute
+            top: 448px
+            width: 100%
+            text-align: center
+            font-size: 24px
+            font-family: MADE Outer Sans Light
+            border-bottom: 1px solid rgba(255,255,255,.15)
+            padding-bottom: 24px
+        //block of card 
+        &__info-card
+            font-family: MADE Outer Sans Thin
+        
+        &__card-block
+            display: flex
+            margin-top: 34px
+            padding: 0 30px
+        &__card-time, &__card-complexity
+            margin-right: 18px
+        &__card-time img, &__card-complexity img, &__card-people img
+            margin-right: 8px
+            padding-bottom: 3%
+        &__describe
+            font-size: 14px
+            text-align: left
+            margin: 24px 30px 
+        &__info-btn
+            height: 100%
+            width: 100%
+            background: rgba(255, 255, 255, 0.05)
+            border: none
+            font-family: MADE Outer Sans Light
+            color: #F7F5F9
+            outline: none !important
+        &__info-btnWrap
+            background: url(icons/Shape.png)
+            width: 267px
+            height: 50px
+            margin: 25px 30px

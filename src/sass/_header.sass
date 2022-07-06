@@ -1,3 +1,187 @@
 header 
     height: 64px
     background-color: rgba(18, 18, 18, 1)
+    display: flex
+    border-bottom: 1px solid rgba(255,255,255,.15)
+    position: relative
+.header-logo
+    max-width: 200px
+    max-height: 50px
+    margin: 15px 30px
+    // popup
+.header-popup
+    width: 300px
+    background: #363636
+    border: 1px solid rgba(255, 255, 255, 0.05)
+    position: absolute
+    top: 83px
+    left: 250px
+    z-index: 2
+    display: none
+    &_active
+        display: block
+    &__question-text
+        font-family: MADE Outer Sans Light
+        font-size: 18px
+        color: #F7F5F9
+        padding: 11px 0 18px 20px
+    &__btn-wrap
+        display: flex
+        padding-left: 20px
+        padding-bottom: 20px
+    &__btn-yes, &__btn-another
+        border: none
+        background: none
+        font-family: MADE Outer Sans Light
+        color: #F7F5F9
+        outline: 0 none !important
+        &:hover
+            opacity: 0.7
+    &__btn-yes
+        width: 73px
+        height: 50px
+        background-image: url(icons/btn_city.png)
+    &__btn-another
+        width: 168px
+        height: 50px
+        background-image: url(icons/btn_city_another.svg)
+    &__btn-wrap-another
+        background: rgba(255, 255, 255, 0.05)
+        margin-left: 10px
+    //second
+    &__choose
+        position: relative
+    &__choose-text
+        font-size: 18px
+        font-family: MADE Outer Sans Thin
+        color: #F7F5F9
+        padding-left: 21px
+        padding-top: 13px
+    &__choose-close
+        background-image: url("icons/Close.svg")
+        width: 24px
+        height: 24px
+        position: absolute
+        top: 17px
+        right: 19px
+        cursor: pointer
+    &__cities
+        display: flex
+        flex-direction: column
+        padding: 20px
+    &__cities-item
+        border: 1px solid rgba(255, 255, 255, 0.15)
+        width: 254px
+        height: 86px
+        padding: 15px 5px 20px 20px
+        font-size: 14px
+        color: #F7F5F9
+        font-family: MADE Outer Sans Light
+        background: rgba(255, 255, 255, 0.05)
+        margin-top: 4px
+    &__item-text
+        display: flex
+        cursor: pointer
+        &:hover
+            color: red
+            .header-popup__pin
+                background-image: url(icons/Pin_red.svg)
+    &__pin
+        margin-right: 3px
+        background-image: url(icons/Pin.svg)
+        width: 24px
+        height: 24px
+    &__pin-text
+        margin-top: 2px
+    &__address
+        color: rgba(255, 255, 255, 0.5)
+    // left block
+.header-item
+    display: flex
+    font-family: MADE Outer Sans Light
+    color: #F7F5F9
+    &__city
+        display: flex
+        align-items: center
+        border-right: none !important
+        +header_elem
+    &__city-icon
+        +icon_size
+    &__city-text
+        margin: 0 7px
+    &__city-arrow 
+        cursor: pointer
+
+    &__phone
+        display: flex
+        align-items: center
+        +header_elem
+    &__phone-icon
+        margin-right: 10px
+        +icon_size
+
+    // right block
+    &_right 
+        position: absolute
+        right: 0
+        height: 100%
+    &__floating-menu
+        position: absolute
+        background-color: rgba(255,255,255,.15) 
+        height: 100%
+        transition: all ease 1s
+        left: 0 
+    &__list
+        width: 0
+        transition: 1s ease width
+        opacity: 0
+    &__list_active
+        display: flex
+        position: relative
+        width: 550px
+        opacity: 1
+    &__list-item
+        display: flex
+        align-items: center
+        padding: 0 30px
+        height: 100%
+        border-left: 1px solid rgba(255,255,255,.15)
+        cursor: pointer
+    &__list_mb
+        display: none
+    &__language
+        display: flex
+    &__language_mb
+        display: none
+    &__flag-uk, &__flag-g
+        padding: 6px 10px
+        border: 1px solid rgba(255,255,255,.15)
+        cursor: pointer
+        &:hover
+            background: rgba(255, 255, 255, 0.15)
+    &__flag-g
+        border-left: none
+    // burger
+    &__burger-wrapper
+        height: 100%
+        cursor: pointer
+    &__burger
+        width: 60px
+        height: 18px
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        margin: 9px 30px 0 30px
+    &__burger div
+        position: absolute
+        width: 60px
+        height: 2px
+        background-color: white
+    &__burger div::before
+        +burger_elem
+        top: -9px
+    &__burger div::after
+        +burger_elem
+        top: 7px
+    
+        

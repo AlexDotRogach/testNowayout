@@ -1,0 +1,74 @@
+@media (max-width: 1350px) 
+    .header-item
+        &__list
+            height: 0
+            top: 64px
+            left: 115px
+        &__list_active 
+            flex-direction: column
+            height: 550px
+            width: 150px
+            transition: 1s ease height
+            background: #121212
+        &__list-item
+            justify-content: center
+            align-content: center
+            border: none
+            border-bottom: 1px solid #000000
+
+@media (max-width: 765px)
+    .header-item__phone
+        display: none
+    .header-item__city
+        display: none
+    .header-popup 
+        top: 50%
+        left: 50%
+        transform: translate(-50%, 50%)
+        
+
+@media (max-width: 600px)
+    .header-item__list
+        display: none
+    .header-item_right
+        right: 0
+    .header-item
+        &__language_mb
+            display: flex
+            align-items: center
+            border: 1px solid rgba(255,255,255,.15)
+            padding: 0 15px
+            cursor: pointer
+        &__flag-uk_mb, &__flag-g_mb
+            width: 25px
+            height: 25px
+            &:hover
+                background: rgba(255, 255, 255, 0.15)
+        &__flag-uk_mb
+            margin-right: 20px
+    .header-item__list_active_mb
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        position: absolute
+        top: 64px
+        left: 100px
+        background: rgba(0, 0, 0, .7)
+    .header-item__list-item_mb
+        cursor: pointer
+        border: 1px solid #000000
+        height: 100px
+        width: 125px
+        text-align: center
+        padding-top: 35px
+@media (max-width: 450px)
+    .header-logo
+        max-width: 130px
+    .header-item
+        &__language_mb
+            padding: 0 5px
+        &__flag-uk_mb, &__flag-g_mb
+            width: 20px
+            height: 20px
+        &__flag-uk_mb
+            margin-right: 10px
